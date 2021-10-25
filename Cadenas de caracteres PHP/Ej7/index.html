@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>
+        Pide una cadena y dos caracteres por teclado (valida que sea un carácter), sustituye
+        la aparición del primer carácter en la cadena por el segundo carácter.
+    </h1>
+
+    <form action="Ej7.php" method="post">
+        <input required type="text" name="cadena">
+        <br>
+        <br>
+        <label for="caracteres">El formato de introduccion de caracteres es (Caracter viejo-Caracter nuevo)</label>
+        <br>
+        <input required type="text" name="caracteres" pattern="[a-zA-Z]+[-]+[a-zA-Z]" maxlength="3">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
