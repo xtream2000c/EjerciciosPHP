@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1>Conversion Euros / Pesetas</h1>
+
     <?php
 
-    for ($i=1; $i == 10 ; $i++) { 
-        echo $i."€ = ".$i*166.368;
+    for ($i=1; $i <= 10 ; $i++) { 
+        echo $i . '€ = ' . $i*166.368 . ' Pestas. <br>';
     }
 
     ?>
