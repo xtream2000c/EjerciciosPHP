@@ -12,7 +12,7 @@
 
     <div style="float: left; width: 40%;">
         <h1>Ingresar Datos</h1>
-        <form action="conexion.php" method="post">
+        <form action="conexionIngreso.php" method="post">
             
             <input type="text" name="nombre" placeholder="Nombre">
             <br><br><input type="text" name="apellidos" placeholder="Apellidos">
@@ -29,31 +29,41 @@
 
     <div style="float: right; width: 40%;">
         <h1>Busqueda de Datos</h1>
-        <form action="conexion.php" method="post">
+        <form action="conexionBusqueda.php" method="post">
             <select name="opcion" id="opcion">
-                <option value="nombre">Nombre</option>
+                <option value="apellido">Apellido</option>
                 <option value="telefono">Telefono</option>
             </select>
-            <input type="text" name="nombre" placeholder="Nombre" id="nombre" >
-            <input type="text" name="telefono" placeholder="Telefono" id="telefono" hidden>
+            <input type="text" name="apellido" placeholder="Primer Apellido" id="apellido" required>
+            <input type="text" name="telefono" placeholder="Telefono" id="telefono" value="" hidden>
             <input type="submit">
 
         </form>
         <script>
             $('#opcion').on('change',function(){
-                if( $(this).val()==="nombre"){
-                $("#nombre").show()
-                $("#telefono").hide()
+                if( $(this).val()==="apellido"){
+                $("#apellido").show();
+                $("#telefono").hide();
+                $("#apellido").prop('required',true);
+                $("#telefono").prop('required',false);
+                $("#apellido").val(null);
+                $("#telefono").val('');
                 }
                 else{
-                $("#nombre").hide()
+                $("#apellido").hide();
+                $("#apellido").prop('required',false);
                 }
                 if( $(this).val()==="telefono"){
-                $("#telefono").show()
-                $("#nombre").hide()
+                $("#telefono").show();
+                $("#apellido").hide();
+                $("#telefono").prop('required',true);
+                $("#apellido").prop('required',false);
+                $("#telefono").val(null);
+                $("#apellido").val('');
                 }
                 else{
-                $("#telefono").hide()
+                $("#telefono").hide();
+                $("#telefono").prop('required',false);
                 }
             });
         </script>
