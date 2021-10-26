@@ -14,13 +14,13 @@
         <h1>Ingresar Datos</h1>
         <form action="conexionIngreso.php" method="post">
             
-            <input type="text" name="nombre" placeholder="Nombre">
-            <br><br><input type="text" name="apellidos" placeholder="Apellidos">
-            <br><br><input type="text" name="direccion" placeholder="Direccion">
-            <br><br><input type="text" name="poblacion" placeholder="Poblacion">
-            <br><br><input type="text" name="codigoPostal" placeholder="Codigo Postal">
-            <br><br><input type="text" name="telefono" placeholder="Telefono">
-            <br><br><input type="text" name="email" placeholder="Email">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <br><br><input type="text" name="apellidos" placeholder="Apellidos" required pattern="[a-zA-Z ]*+[a-zA-Z]*">
+            <br><br><input type="text" name="direccion" placeholder="Direccion" required>
+            <br><br><input type="text" name="poblacion" placeholder="Poblacion" required>
+            <br><br><input type="text" name="codigoPostal" placeholder="Codigo Postal" required pattern="[0-9]{5,5}">
+            <br><br><input type="text" name="telefono" placeholder="Telefono" required pattern="[0-9]{9,9}">
+            <br><br><input type="text" name="email" placeholder="Email" required>
             <br><br>
             <input type="submit">
 
