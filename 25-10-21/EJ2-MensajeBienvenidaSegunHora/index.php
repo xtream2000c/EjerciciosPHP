@@ -15,11 +15,9 @@
 
     $hora = $fecha['hours'];
 
-    echo $hora;
-
-    if ( 08 =< $hora && $hora < 13 ) {
+    if ( '08' <= $hora && $hora < '13' ) {
         echo "Buenos dias";
-    }elseif( 13 =< $hora && $hora < 21 ){
+    }elseif( '13' <= $hora && $hora < '21' ){
         echo "Buenas tardes";
     }else{
         echo "Buenas noches";
