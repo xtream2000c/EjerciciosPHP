@@ -42,7 +42,6 @@
                 $cadena3 = $cadena3 . " ". 0;
             }
             
-            
         }
 
         echo "Cadena 3: ". $cadena3;
