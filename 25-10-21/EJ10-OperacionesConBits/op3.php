@@ -8,8 +8,8 @@
 </head>
 <body>
     
-<h1>2.-Una secuencia aleatoria de 10 bits y la detección de cambios de bits consecutivos en la secuencia.</h1>
-<br>
+    <h1>3.-Una secuencia aleatoria de bits y su conversión a código de Gray.</h1>
+    <br>
 
     <?php
 
@@ -20,20 +20,21 @@
         }
 
         echo "Cadena inicial: ". $cadena1;
-
         $cadena1 = str_replace(' ', '', $cadena1);
-        $cadena2 = "";
+        $cadena2= $cadena1[0];
 
+        echo "<br>";
+        
         for ($i=0; $i < strlen($cadena1)-1; $i++) { 
+
             if ($cadena1[$i] == $cadena1[$i+1]){
                 $cadena2 = $cadena2 . " " . +0;
             }else{
                 $cadena2 = $cadena2 . " " . 1;
             }
         }
-        echo "<br>";
-        echo "Cadena de deteccion de cambios: ". $cadena2;
 
+        echo "Cadena codigo Gray: ". $cadena2;
     ?>
 
 </body>
